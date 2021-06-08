@@ -21,6 +21,10 @@ export default class ArrayDeNotas {
 
     }
 
+    desinscrever(func){
+        this._inscritos = this._inscritos.filter(f => f !== func);
+    }
+
     notificar() {
         this._inscritos.forEach(func => {
             func(this.notas);
